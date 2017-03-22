@@ -19,8 +19,6 @@ include("auth.php");
 
        <ul>
          <li><a href="index.php" id="logo">JSU Book Exchange</a></li>
-         <li><a href="login.php">Login</a></li>
-         <li><a href="registration.php">Register</a></li>
          <li><a href="dashboard.php">Dashboard</a></li>
          <li><a href="logout.php">Logout</a></li>
          <li><a href="contactus.php">Contact Us</a></li>
@@ -32,7 +30,17 @@ include("auth.php");
          <p>This is another secured page.</p>
     </div>
   </header>
+<div class="container">
+        <section>
+          <div class="wrap">
+   <div class="search">
+      <input type="text" class="searchTerm" placeholder="Search for a textbook by ISBN, title or keyword">
+      <button type="submit" class="searchButton">
+        <i class="fa fa-search"></i>
+     </button>
 
+        </section>
+      </div>
   <footer>
   <div class="footer">
     Copyright &copy; JSUBOOKEXCHANGE.COM

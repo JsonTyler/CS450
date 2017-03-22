@@ -54,10 +54,6 @@
 				 <ul>
 					 <li><a href="index.php" id="logo">JSU Book Exchange</a></li>
 					 <li><a href="login.php">Login</a></li>
-					 <li><a href="registration.php">Register</a></li>
-					 <li><a href="dashboard.php">Dashboard</a></li>
-					 <li><a href="logout.php">Logout</a></li>
-					 <li><a href="contactus.php">Contact Us</a></li>
 				 </ul>
 
 		 </div>

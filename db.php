@@ -2,7 +2,7 @@
 // Enter your Host, username, password, database below.
 $con = mysqli_connect("localhost", "jacksonstate","thisisapassword","jacksonstateproject");
 
-//$con = mysqli_connect("localhost","root","","jackson"); <-- local connection
+//$con = mysqli_connect("localhost","root","","jackson");
 
 // Check connection
 if (mysqli_connect_errno())
