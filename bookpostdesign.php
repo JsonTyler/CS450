@@ -24,27 +24,25 @@ include("auth.php");
        </ul>
     </div>
 
-  </header>
-</header>
-<main>
-  <div class="form">
-    <section>
-      <h1>What are you posting: </h1>
-      <form action="bookpost.php" method="POST">
-        <input type="number" name="isbn" placeholder="isbn #" required><br /><br />
-        <input type="text" name="author" placeholder="author" required><br /><br />
-        <input type="text" name="title" placeholder="title" required><br /><br />
-        <input type="number" name="edition" placeholder="edition" required><br /><br />
+    <div class="form">
+
+      <h3>What are you posting: </h3>
+      <form name= "bookpost" action="bookpost.php" method="POST">
+        <input type="number" name="isbn" placeholder="ISBN #" required><br /><br />
+        <input type="text" name="author" placeholder="Author" required><br /><br />
+        <input type="text" name="title" placeholder="Title" required><br /><br />
+        <input type="number" name="edition" placeholder="Edition #" required><br /><br />
          <select id = "actions" name = "actions">
                 <option value = "Buy">Buy</option>
                 <option value = "Sell">Sell</option>
                 <option value = "Trade">Trade</option>
-         </select>
+         </select> <br /><br />
         <input type="submit" value="POST" name="submit">
       </form>
-    </section>
+
   </div>
-</main>
+  </header>
+
 <footer>
   <div class="footer">
     Copyright &copy; JSUBOOKEXCHANGE.COM

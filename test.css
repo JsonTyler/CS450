@@ -186,6 +186,8 @@ footer {
 
 }
 
+
+
 .container img {
     position: absolute;
     left: 0;
@@ -199,5 +201,9 @@ footer {
 }
 form {
 	display: inline-block;
-  text-align: "center";
+  text-align: center;
+}
+
+.bookpost {
+  text-align: center;
 }

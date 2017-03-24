@@ -27,9 +27,9 @@
       <div class="form">
           <h1>Questions, thoughts, or concerns?</h1>
           <form name = "myemailform" action="form-to-email.php" method="post" >
-            <input type="text" name="name" placeholder="Name" required />
-            <input type="email" name="email" placeholder="Email" required />
-            <textarea name="message" placeholder="Message"></textarea>
+            <input type="text" name="name" placeholder="Name" required /><br /><br />
+            <input type="email" name="email" placeholder="Email" required /><br /><br />
+            <textarea name="message" placeholder="Message" rows="10" cols="30"></textarea><br /><br />
             <input type="submit" value="Send Form">
           </form>
       </div>
