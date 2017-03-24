@@ -1,52 +1,44 @@
 <?php
-//include auth.php file on all secure pages
+require('db.php');
 include("auth.php");
+
+  //form submitted
+
+  if(isset($_SESSION['username']))
+        $user = $_SESSION['username'];
+
+        if($user){
+            $res = mysqli_query($con,
+                "SELECT `id` FROM `jackson`.`users` WHERE `username`='$user'");
+
+    $id = mysqli_fetch_object($res)->id;
+    echo $id;
+}
+
+  //first load the values from form in the html
+    //$id = $_POST['id'];
+    echo "<br><br>".$id."<br>";
+    $isbn = $_POST['isbn'];
+    echo "<br><br>".$isbn."<br>";
+    $author = $_POST['author'];
+    echo "<br><br>".$author."<br>";
+    $title = $_POST['title'];
+    echo "<br><br>".$title."<br>";
+    $edition = $_POST['edition'];
+    echo "<br><br>".$edition."<br>";
+    $actions = $_POST['actions'];
+    echo "<br><br>".$actions."<br>";
+
+    $con = mysqli_connect("localhost","root","","jackson") or die(mysqli_connect_error());
+
+    $query = "INSERT INTO `books` (`isbn`, `author`, `title`, `edition`, `actions`, `id`) VALUES ('$isbn', '$author', '$title', '$edition', '$actions', '$id');";
+            $response = mysqli_query($con, $query);
+
+
+//check if the user actually set those values and that they are not left Empty
+//if(isset($isbn) && isset($author) && isset($title) && isset($edition) && isset($action)){
+//
+//}
+
+
 ?>
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-      <title>Welcome Home</title>
-    <link rel="stylesheet" type="text/css" href="test.css" />
-      <title>JSU Book Exchange</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
-  </head>
-
-  <body>
-    <header>
-			<div id="nav">
-
-				 <ul>
-					 <li><a href="index.php" id="logo">JSU Book Exchange</a></li>
-           <li><a href=#>Welcome <?php echo $_SESSION['username'];?>!</a></li>
-					 <li><a href="dashboard.php">Dashboard</a></li>
-					 <li><a href="logout.php">Logout</a></li>
-           <li><a href="contactus.php">Contact Us</a></li>
-				 </ul>
-
-		 </div>
-     <div class="form">
-       <h1>Submissions</h1>
-       <form name="submissions" action="index.php" method="post">
-         <input type="text" name="title" placeholder="Title" required />
-         <input type="text" name="author" placeholder="Author" required /><br><br />
-         <input type="number" name="isbn" placeholder="ISBN #" required /><br /><br />
-         <select name="actions">
-            <option value="Buy">Buy</option>
-            <option value="Sell">Sell</option>
-            <option value="Trade">Trade</option>
-         </select> <br />
-         <input type="submit" name="submit" value="Post" />
-       </form>
-     </div>
-    </header>
-    <footer>
-      <div class="footer">
-Copyright &copy; JSUBOOKEXCHANGE.COM
-
-</div>
-    </footer>
-
-</body>
-</html>
