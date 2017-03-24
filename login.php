@@ -31,7 +31,7 @@
          if($rows==1){
 	       $_SESSION['username'] = $username;
             // Redirect user to index.php
-	    header("Location: indexhtml.php");
+	    header("Location: index.php");
          }else{
 	echo "<div class='form'>
 <h3>Username/password is incorrect.</h3>

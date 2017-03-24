@@ -18,7 +18,7 @@ include("auth.php");
       <div id="nav">
          <ul>
            <li><a href="index.php" id="logo">JSU Book Exchange</a></li>
-           <li><a href="dashboard.php">Dashboard</a></li>
+           <li><a href="bookpostdesign.php">Book Submissions</a></li>
            <li><a href="logout.php">Logout</a></li>
            <li><a href="contactus.php">Contact Us</a></li>
          </ul>
