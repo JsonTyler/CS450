@@ -19,26 +19,28 @@ include("auth.php");
 
 				 <ul>
 					 <li><a href="index.php" id="logo">JSU Book Exchange</a></li>
+           <li><a href=#>Welcome <?php echo $_SESSION['username'];?>!</a></li>
 					 <li><a href="dashboard.php">Dashboard</a></li>
 					 <li><a href="logout.php">Logout</a></li>
            <li><a href="contactus.php">Contact Us</a></li>
 				 </ul>
 
 		 </div>
-      <div class="form">
-        <p>Welcome <?php echo $_SESSION['username']; ?>!</p>
-        <p>Write text here.</p>
-      </div>
+     <div class="form">
+       <h1>Submissions</h1>
+       <form name="submissions" action="index.php" method="post">
+         <input type="text" name="title" placeholder="Title" required />
+         <input type="text" name="author" placeholder="Author" required /><br><br />
+         <input type="number" name="isbn" placeholder="ISBN #" required /><br /><br />
+         <select name="actions">
+            <option value="Buy">Buy</option>
+            <option value="Sell">Sell</option>
+            <option value="Trade">Trade</option>
+         </select> <br />
+         <input type="submit" name="submit" value="Post" />
+       </form>
+     </div>
     </header>
-    <main>
-      <div class="container">
-        <section>
-          <h1>UNDER CONSTRUCTION!</h1>
-          <h2>Except for the login and register. Yeah, they work.</h2>
-        </section>
-      </div>
-    </main>
-
     <footer>
       <div class="footer">
 Copyright &copy; JSUBOOKEXCHANGE.COM
