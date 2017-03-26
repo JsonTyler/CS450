@@ -18,6 +18,12 @@ include("auth.php");
   //first load the values from form in the html
     //$id = $_POST['id'];
 
+
+
+    $subject = $_POST['subject'];
+
+    $price = $_POST['price'];
+
     $isbn = $_POST['isbn'];
 
     $author = $_POST['author'];
@@ -26,19 +32,21 @@ include("auth.php");
 
     $edition = $_POST['edition'];
 
+    $quality = $_POST['quality'];
+
     $actions = $_POST['actions'];
 
+    //if(!isset($subject))
+    //  echo "Nothing Here!";
+    //else
+    //  echo $subject;
 
-    $con = mysqli_connect("localhost","root","","jackson") or die(mysqli_connect_error());
 
-    $query = "INSERT INTO `books` (`isbn`, `author`, `title`, `edition`, `actions`, `id`) VALUES ('$isbn', '$author', '$title', '$edition', '$actions', '$id');";
-            $response = mysqli_query($con, $query);
+    //$con = mysqli_connect("localhost","root","","jackson") or die(mysqli_connect_error());
 
+    $query = "INSERT INTO `jackson`.`books` (`subject`, `price`, `isbn`, `author`, `title`, `edition`, `quality`, `actions`, `id`) VALUES ('$subject', '$price', '$isbn', '$author', '$title', '$edition', '$quality', '$actions', '$id');";
+            $response = mysqli_query($con, $query) or die(error_get_last());
 
-//check if the user actually set those values and that they are not left Empty
-//if(isset($isbn) && isset($author) && isset($title) && isset($edition) && isset($action)){
-//
-//}
 ?>
 
 <!DOCTYPE html>
