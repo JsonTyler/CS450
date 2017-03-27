@@ -19,7 +19,7 @@ include("auth.php");
 
        <ul>
          <li><a href="index.php" id="logo">JSU Book Exchange</a></li>
-         <li><a href="mybooks.php">Book Search</a></li>
+         <li><a href="search.php">Book Search</a></li>
          <li><a href="contactus.php">Contact Us</a></li>
          <li><a href="logout.php">Logout</a></li>
        </ul>

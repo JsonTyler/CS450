@@ -1,95 +1,83 @@
 <?php
 require('db.php');
 include("auth.php");
+
 ?>
 
-<!DOCTYPE html>
-
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-      <title>Book Post</title>
-    <link rel="stylesheet" type="text/css" href="test.css" />
-    <title>JSU Book Exchange</title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
-</head>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Search Books</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="test.css" />
+  <title>JSU Book Exchange</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+ </head>
+ <body>
+   <header>
+     <div id="nav">
 
-<body>
-  <header>
-    <div id="nav">
+        <ul>
+          <li><a href="index.php" id="logo">JSU Book Exchange</a></li>
+          <li><a href="bookpostdesign.php">Book Submissions</a></li>
+          <li><a href="contactus.php">Contact Us</a></li>
+          <li><a href="logout.php">Logout</a></li>
+        </ul>
+     </div>
 
-       <ul>
-         <li><a href="index.php" id="logo">JSU Book Exchange</a></li>
-         <li><a href="mybooks.php">Book Search</a></li>
-         <li><a href="bookpostdesign.php">Book Submissions</a></li>
-         <li><a href="contactus.php">Contact Us</a></li>
-         <li><a href="logout.php">Logout</a></li>
-       </ul>
+   </header>
+  <div class="container">
+   <br />
+   <h2 align="center">Search JSU Book Exchange</h2><br />
+   <div class="form-group">
+    <div class="input-group">
+     <span class="input-group-addon">Search</span>
+     <input type="text" name="search_text" id="search_text" placeholder="Search by subject, price, isbn, author, title..." class="form-control" />
     </div>
+   </div>
+   <br />
+   <div id="result"></div>
+  </div>
 
-  </header>
-</header>
+  <footer>
+    <div class="footer">
+      Copyright &copy; JSUBOOKEXCHANGE.COM
 
-  <main>
-    <p>Search results: </p>
-
-  </main>
-  <?php
-  $output = ' ';
-
-  if(isset($_POST['q']) && $_POST['q'] !== ' '){
-    $searchq = $_POST['q'];
-
-    $q = mysqli_query($con, "SELECT * FROM books WHERE subject LIKE '%$searchq%'
-      OR isbn LIKE '%$searchq%' OR author LIKE '%$searchq%' OR title LIKE '%$searchq%'
-      ") or die(mysqli_error($con));
-
-    $c = mysqli_num_rows($q);
-    if($c == 0){
-      $output = 'No search results for <b>"' . $searchq . '"</b>';
-      echo 'No data found';
-    } else {
-      while($row = mysqli_fetch_array($q)){
-        $listing_id = $row['listing_id'];
-        $subject = $row['subject'];
-        $price = $row['price'];
-        $isbn = $row['isbn'];
-        $author = $row['author'];
-        $title = $row['title'];
-        $edition = $row['edition'];
-        $quality = $row['quality'];
-        $actions = $row['actions'];
-
-        $output .= '<a href=" ' . $listing_id . '">
-                    <h3> ' . $subject . '</h3>
-                    <p> ' . $price . '</p>
-                    <p> ' . $isbn . '</p>
-                    <p> ' . $author . '</p>
-                    <p> ' . $title . '</p>
-                    <p> ' . $edition . '</p>
-                    <p> ' . $quality . '</p>
-                    <p> ' . $actions . '</p>
-                    </a>';
-                }
-            }
-
-
-
-      } else {
-        header("location: index.php");
-      }
-      print("$output");
-      mysqli_close($con);
-
-   ?>
-
-<footer>
-  <div class="footer">
-    Copyright &copy; JSUBOOKEXCHANGE.COM
-
-</div>
-  </footer>
-
-</body>
+  </div>
+    </footer>
+ </body>
 </html>
+
+
+<script>
+$(document).ready(function(){
+
+ load_data();
+
+ function load_data(query)
+ {
+  $.ajax({
+   url:"fetch.php",
+   method:"POST",
+   data:{query:query},
+   success:function(data)
+   {
+    $('#result').html(data);
+   }
+  });
+ }
+ $('#search_text').keyup(function(){
+  var search = $(this).val();
+  if(search != '')
+  {
+   load_data(search);
+  }
+  else
+  {
+   load_data();
+  }
+ });
+});
+</script>
