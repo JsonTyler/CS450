@@ -8,6 +8,10 @@ include("auth.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
       <title>Book Post</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+      <link rel="stylesheet" type="text/css" href="test.css" />
     <link rel="stylesheet" type="text/css" href="test.css" />
     <title>JSU Book Exchange</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
