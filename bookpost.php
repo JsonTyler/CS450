@@ -1,52 +1,32 @@
+
 <?php
 require('db.php');
 include("auth.php");
-
   //form submitted
-
   if(isset($_SESSION['username']))
         $user = $_SESSION['username'];
-
         if($user){
             $res = mysqli_query($con,
                 "SELECT `id` FROM `jackson`.`users` WHERE `username`='$user'");
-
     $id = mysqli_fetch_object($res)->id;
-
 }
-
   //first load the values from form in the html
     //$id = $_POST['id'];
-
-
-
     $subject = $_POST['subject'];
-
     $price = $_POST['price'];
-
     $isbn = $_POST['isbn'];
-
     $author = $_POST['author'];
-
     $title = $_POST['title'];
-
     $edition = $_POST['edition'];
-
     $quality = $_POST['quality'];
-
     $actions = $_POST['actions'];
-
     //if(!isset($subject))
     //  echo "Nothing Here!";
     //else
     //  echo $subject;
-
-
     //$con = mysqli_connect("localhost","root","","jackson") or die(mysqli_connect_error());
-
-    $query = "INSERT INTO `jackson`.`books` (`subject`, `price`, `isbn`, `author`, `title`, `edition`, `quality`, `actions`, `id`) VALUES ('$subject', '$price', '$isbn', '$author', '$title', '$edition', '$quality', '$actions', '$id');";
+    $query = "INSERT INTO `books` (`subject`, `price`, `isbn`, `author`, `title`, `edition`, `quality`, `actions`, `id`) VALUES ('$subject', '$price', '$isbn', '$author', '$title', '$edition', '$quality', '$actions', '$id');";
             $response = mysqli_query($con, $query) or die(error_get_last());
-
 ?>
 
 <!DOCTYPE html>

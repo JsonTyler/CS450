@@ -10,7 +10,7 @@ include("auth.php");
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-      <title>Book Post</title>
+
     <link rel="stylesheet" type="text/css" href="test.css" />
     <title>JSU Book Exchange</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
@@ -22,18 +22,26 @@ include("auth.php");
 
        <ul>
          <li><a href="index.php" id="logo">JSU Book Exchange</a></li>
-         <li><a href="mybooks.php">Book Search</a></li>
          <li><a href="bookpostdesign.php">Book Submissions</a></li>
          <li><a href="contactus.php">Contact Us</a></li>
          <li><a href="logout.php">Logout</a></li>
        </ul>
     </div>
 
+
+
+
     <div class="form">
-         <p>Welcome to your Book Search -- -- Homepage</p>
+      <h1>Book Search: </h1>
+      <form name="booksearch" action="search.php" method="post">
+         <input type="text" name="q" placeholder="Search for books..." size="40" maxlength="50" />
+         <input type="submit" name="Submit" value="Search"/>
+
+      </form>
     </div>
+
   </header>
-</header>
+
 <main>
 
 </main>

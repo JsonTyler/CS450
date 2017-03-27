@@ -199,11 +199,16 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 form {
 	display: inline-block;
   text-align: center;
+  float: left;
 }
 
-.bookpost {
-  text-align: center;
-}
+#formbooks {
+
+    position: relative;
+    top: -43px;
+    left: 210px;
+  }
