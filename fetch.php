@@ -27,15 +27,15 @@ if(mysqli_num_rows($result) > 0)
     <div class="table-responsive">
      <table class="table table bordered">
       <tr>
-        <th>listing_id</th>
-        <th>subject</th>
-        <th>price</th>
-        <th>isbn</th>
-        <th>author</th>
-        <th>title</th>
-        <th>edition</th>
-        <th>quality</th>
-        <th>actions</th>
+        <th>Listing id</th>
+        <th>Subject</th>
+        <th>Price</th>
+        <th>Isbn</th>
+        <th>Author</th>
+        <th>Title</th>
+        <th>Edition</th>
+        <th>Quality</th>
+        <th>Actions</th>
       </tr>
       ';
 
