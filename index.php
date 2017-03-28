@@ -2,7 +2,7 @@
 require('db.php');
 include("auth.php");
 ?>
-<!-- where was the background image kept? lets see ill show you  -->
+
 <!DOCTYPE html>
 
 <html>
