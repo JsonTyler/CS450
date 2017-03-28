@@ -1,0 +1,9 @@
+main{
+  width:80%;
+  max-width:1000px;
+  display:block;
+  margin:0 auto;
+  padding-top:200px;
+  padding-bottom:200px;
+  background-color:white;
+}
