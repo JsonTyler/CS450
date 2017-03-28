@@ -36,6 +36,7 @@ if(mysqli_num_rows($result) > 0)
         <th>Edition</th>
         <th>Quality</th>
         <th>Actions</th>
+        <th>Email</th>
       </tr>
       ';
 
@@ -52,6 +53,8 @@ while($row = mysqli_fetch_array($result))
     <td>'.$row["edition"].'</td>
     <td>'.$row["quality"].'</td>
     <td>'.$row["actions"].'</td>
+    <td>'.$row["email_user"].'</td>
+
 
    </tr>
   ';

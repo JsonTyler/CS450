@@ -88,6 +88,9 @@ include("auth.php");
                   <option value = "Trade">Trade</option>
            </select> <br /><br />
 
+           <label>Email: </label>
+           <input type="email_user" name="email_user" required /> <br /> <br />
+
           <input type="submit" value="POST" name="submit">
         </form>
       </div>

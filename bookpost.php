@@ -20,12 +20,14 @@ include("auth.php");
     $edition = $_POST['edition'];
     $quality = $_POST['quality'];
     $actions = $_POST['actions'];
+    $email_user = $_POST['email_user'];
     //if(!isset($subject))
     //  echo "Nothing Here!";
     //else
     //  echo $subject;
     //$con = mysqli_connect("localhost","root","","jackson") or die(mysqli_connect_error());
-    $query = "INSERT INTO `books` (`subject`, `price`, `isbn`, `author`, `title`, `edition`, `quality`, `actions`, `id`) VALUES ('$subject', '$price', '$isbn', '$author', '$title', '$edition', '$quality', '$actions', '$id');";
+    $query = "INSERT INTO `books` (`subject`, `price`, `isbn`, `author`, `title`, `edition`, `quality`, `actions`, `email_user`, `id`)
+     VALUES ('$subject', '$price', '$isbn', '$author', '$title', '$edition', '$quality', '$actions', '$email_user', '$id');";
             $response = mysqli_query($con, $query) or die(error_get_last());
 ?>
 
@@ -40,6 +42,9 @@ include("auth.php");
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
       <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
       <link rel="stylesheet" type="text/css" href="assets/css/forms.css" />
+      <link rel="stylesheet" type="text/css" href="assets/css/navigation.css" />
+      <link rel="stylesheet" type="text/css" href="assets/css/utils.css" />
+      <link rel="stylesheet" type="text/css" href="assets/css/submitbook.css" />
     <title>JSU Book Exchange</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
 </head>
