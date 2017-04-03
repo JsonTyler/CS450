@@ -1,7 +1,13 @@
 <?php
 //fetch.php
+
+//local
 $con = mysqli_connect("localhost", "root", "", "jackson");
+
+//live url
+//$con = mysqli_connect("localhost", "jacksonstate","thisisapassword","jacksonstateproject");
 $output = '';
+
 if(isset($_POST["query"]))
 {
  $search = mysqli_real_escape_string($con, $_POST["query"]);
