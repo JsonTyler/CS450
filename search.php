@@ -7,6 +7,7 @@ include("auth.php");
 <html>
  <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Search Books</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -14,12 +15,11 @@ include("auth.php");
   <link rel="stylesheet" type="text/css" href="assets/css/search.css" />
   <link rel="stylesheet" type="text/css" href="assets/css/utils.css" />
   <link rel="stylesheet" type="text/css" href="assets/css/navigation.css" />
-  <title>JSU Book Exchange</title>
+  <link rel="stylesheet" type="text/css" href="main1.css" />
+
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
  </head>
- <body>
-
-
+ 
    <header>
      <div id="nav">
         <ul>
@@ -30,7 +30,8 @@ include("auth.php");
         </ul>
      </div>
   </header>
-
+  
+<body>
   <main>
     <div class="container">
       <div id="searchHeader">

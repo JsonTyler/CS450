@@ -30,11 +30,11 @@ include("auth.php");
            <li><a href="contactus.php">Contact Us</a></li>
          </ul>
      </div>
-
+</header>
      <div class="form">
        <p>Thank you, <?php echo $_SESSION['username']; ?>!</p>
      </div>
-  </header>
+  
 
 
 

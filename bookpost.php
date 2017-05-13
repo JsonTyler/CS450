@@ -1,4 +1,3 @@
-
 <?php
 require('db.php');
 include("auth.php");
@@ -7,7 +6,7 @@ include("auth.php");
         $user = $_SESSION['username'];
         if($user){
             $res = mysqli_query($con,
-                "SELECT `id` FROM `jackson`.`users` WHERE `username`='$user'");
+                "SELECT `id` FROM `jacksonstateproject`.`users` WHERE `username`='$user'");
     $id = mysqli_fetch_object($res)->id;
 }
   //first load the values from form in the html
@@ -41,10 +40,8 @@ include("auth.php");
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
       <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
-      <link rel="stylesheet" type="text/css" href="assets/css/forms.css" />
-      <link rel="stylesheet" type="text/css" href="assets/css/navigation.css" />
-      <link rel="stylesheet" type="text/css" href="assets/css/utils.css" />
-      <link rel="stylesheet" type="text/css" href="assets/css/submitbook.css" />
+      <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+      
     <title>JSU Book Exchange</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
 </head>
@@ -61,12 +58,11 @@ include("auth.php");
          <li><a href="logout.php">Logout</a></li>
        </ul>
     </div>
-
+</header>
     <div class="form">
       <p>Thank you, <?php echo $_SESSION['username']; ?>! Your book has been posted.</p>
     </div>
-  </header>
-</header>
+  
 <main>
 
 </main>

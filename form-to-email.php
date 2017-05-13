@@ -28,7 +28,7 @@ $email_subject = "New Form submission";
 $email_body = "You have received a new message from the user $name.\n".
     "Here is the message:\n $message: ".
 
-$to = "jasondreams0513@gmail.com,dustan26@live.com";//
+$to = "jasondreams0513@gmail.com,dustan26@live.com, J00639016@students.jsums.edu";//
 $headers = "From: $email_from \r\n";
 $headers .= "Reply-To: $visitor_email \r\n";
 //Send the email!

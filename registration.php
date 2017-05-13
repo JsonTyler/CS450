@@ -10,10 +10,28 @@
 			<link rel="stylesheet" type="text/css" href="assets/css/forms.css" />
       <link rel="stylesheet" type="text/css" href="assets/css/navigation.css" />
       <link rel="stylesheet" type="text/css" href="assets/css/utils.css" />
+      <link rel="stylesheet" type="text/css" href="assets/css/submitbook.css" />
+      
 			<title>JSU Book Exchange</title>
 		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
 	</head>
 	<body>
+		
+
+		<header>
+			<div id="nav">
+
+				 <ul>
+					 <li><a href="index.php" id="logo">JSU Book Exchange</a></li>
+					 <li><a href="login.php">Login</a></li>
+				 </ul>
+
+		 </div>
+
+			
+		</header>
+		<main>
+		<center>
 		<?php
 		require('db.php');
 
@@ -39,6 +57,7 @@
 								die();
 			      	} else {
 			        	echo ": Have a good night!";
+			        	header('Location: thankyou.php');
 			      	}
 						}
 
@@ -52,19 +71,9 @@
 		        }
 		    }else{
 		?>
-
-		<header>
-			<div id="nav">
-
-				 <ul>
-					 <li><a href="index.php" id="logo">JSU Book Exchange</a></li>
-					 <li><a href="login.php">Login</a></li>
-				 </ul>
-
-		 </div>
-
-			<div class="form">
-				<h1>Register</h1>
+		</center>
+		<div class="form">
+				
 				<form name="registration" action="registration.php" method="post">
 					<input type="text" name="username" placeholder="Username" required />
 					<input type="email" name="email" placeholder="Email" required />
@@ -72,7 +81,6 @@
 					<input type="submit" name="submit" value="Register" />
 				</form>
 			</div>
-		</header>
 
 <?php } ?>
 
@@ -83,5 +91,6 @@ Copyright &copy; JSUBOOKEXCHANGE.COM
 </FORM>
 </div>
 </footer>
+</main>
 </body>
 </html>

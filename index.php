@@ -9,13 +9,11 @@ include("auth.php");
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <title>Book Post</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="assets/css/index.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/utils.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/navigation.css" />
+    
+    <title>Home Page</title>
+   
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/submitbook.css" />
     <title>JSU Book Exchange</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
 </head>
@@ -34,12 +32,17 @@ include("auth.php");
     </div>
 
     <div class="form">
-         <p>Welcome to your Book Search -- -- Homepage</p>
+         
     </div>
   </header>
-</header>
-<main>
 
+<main>
+<div class="container">
+<center>
+<p>Welcome to the Senior project of Jason Bruno, Raven Lawrence, Michael Moore, and Ladarius Felix!</p>
+<p>Select an option above in the navigation to get started.</p>
+</center>
+</div>
 </main>
 <footer>
   <div class="footer">

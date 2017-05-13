@@ -3,18 +3,18 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
       <title>Login</title>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
-      <link rel="stylesheet" type="text/css" href="assets/css/forms.css" />
-      <link rel="stylesheet" type="text/css" href="assets/css/navigation.css" />
-      <link rel="stylesheet" type="text/css" href="assets/css/utils.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/forms.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/navigation.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/utils.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/submitbook.css" />
       <title>JSU Book Exchange</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
 </head>
 
-<body>
   <?php
   require('db.php');
   session_start();
@@ -36,7 +36,7 @@
          if($rows==1){
 	       $_SESSION['username'] = $username;
             // Redirect user to index.php
-	    header("Location: index.php");
+	    header("Location: search.php");
          }else{
 	echo "<div class='form'>
 <h3>Username/password is incorrect.</h3>
@@ -44,7 +44,7 @@
 	}
     }else{
 ?>
-
+<body>
 <header>
   <div id="nav">
 
@@ -54,7 +54,10 @@
      </ul>
 
  </div>
-
+</header>
+<main>
+<center>
+<div class="content">
  <div class="form">
    <form action="login.php" method="post" name="login">
      <input type="text" name="username" placeholder="Username" required />
@@ -62,16 +65,18 @@
      <input name="submit" type="submit" value="Login" />
    </form>
    <p>Not registered yet? <a href='registration.php'>Register Here</a></p>
+  </FORM>
   </div>
-</header>
+  </div>
+  </center>
 <?php } ?>
-
+>
+</div>
+</main>
 <footer>
 	<div class="footer">
 Copyright &copy; JSUBOOKEXCHANGE.COM
 
-</FORM>
-</div>
 </footer>
-</body>
+</body
 </html>

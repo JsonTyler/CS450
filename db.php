@@ -2,10 +2,10 @@
 // Enter your Host, username, password, database below.
 
 //for live website
-//$con = mysqli_connect("localhost", "jacksonstate","thisisapassword","jacksonstateproject");
+$con = mysqli_connect("localhost", "jacksonstate","thisisapassword","jacksonstateproject");
 
 //for local use
-$con = mysqli_connect("localhost","root","","jackson");
+//$con = mysqli_connect("localhost","root","","jackson");
 
 // Check connection
 if (mysqli_connect_errno())

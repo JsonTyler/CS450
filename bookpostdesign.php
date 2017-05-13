@@ -31,6 +31,7 @@ include("auth.php");
     </div>
   </header>
   <main>
+<center>
     <div class="container">
       <div class="form">
         <h3>Post your book below:  </h3><br /><br />
@@ -95,6 +96,7 @@ include("auth.php");
         </form>
       </div>
     </div>
+</center>
   </main>
   <footer>
     <div class="footer">

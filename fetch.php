@@ -1,13 +1,7 @@
 <?php
 //fetch.php
-
-//local
-$con = mysqli_connect("localhost", "root", "", "jackson");
-
-//live url
-//$con = mysqli_connect("localhost", "jacksonstate","thisisapassword","jacksonstateproject");
+$con = mysqli_connect("localhost", "jacksonstate","thisisapassword","jacksonstateproject");
 $output = '';
-
 if(isset($_POST["query"]))
 {
  $search = mysqli_real_escape_string($con, $_POST["query"]);
@@ -60,13 +54,14 @@ while($row = mysqli_fetch_array($result))
     <td>'.$row["quality"].'</td>
     <td>'.$row["actions"].'</td>
     <td>'.$row["email_user"].'</td>
+    <td><a href="mailto:".$row["email_user"]."></td>
 
 
    </tr>
   ';
 
 
-
+//
 
  }
  echo $output;

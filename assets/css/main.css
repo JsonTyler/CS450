@@ -1,0 +1,266 @@
+/* global footer */
+header{
+  
+  height: 15%;
+  width:100%;
+  
+  background-color:#0090DA;
+}
+
+header a, header nav, header li{
+  height:60px;
+  width:auto;
+  display:inline-block;
+  padding: 10px;
+  font-variant: small-caps;
+  font-size: 21px;
+}
+
+header nav{
+  display:inline-block;
+  float:right;
+}
+
+header a{
+  text-decoration:none;
+  color:rgba(255, 255, 255, 0.9);
+  line-height:60px;
+  font-family:'Roboto', sans-serif;
+}
+
+header h1{
+  display:inline-block;
+  font-weight:500;
+  text-align: right;
+}
+main{
+  width:80%;
+  max-width:1000px;
+  display:block;
+  margin:0 auto;
+  padding-top:200px;
+  padding-bottom:200px;
+  
+}
+
+main h1{
+  font-weight:500;
+  padding: 0;
+  font-size: 4.5em
+}
+
+
+main section h1{
+  font-weight:800;
+  font-size:1.1em;
+  text-align: right;
+}
+
+main section h2{
+  font-weight:300;
+  font-size:0.9em;
+  margin-top:20px;
+  text-align: right;
+}
+body{
+	width:100vw;
+	min-height:100vh;
+	height:auto;
+	background-image:url('../img/image.jpeg');
+	background-size:cover;
+	background-repeat:no-repeat;
+}
+
+/* global container */
+container{
+        text-align:center;
+	width:80%;
+	max-width:1000px;
+	height:70%;
+	display:block;
+	margin:0 auto;
+	vertical-align:middle;
+}
+
+footer {
+	text-align:center;
+	color:#ffffff;
+ 	position:fixed;
+ 	bottom:0px;
+        width:100%;
+ 	height:40px;
+	z-index:999999;
+ 	background:#0090DA;
+	display: inline-block;
+}
+.clearfix:before, .clearfix:after{
+     content: "";
+     display: table;
+}
+.clearfix:after{
+     clear: both;
+}
+a{
+     color:#0067ab;
+     text-decoration:none;
+}
+a:hover{
+     text-decoration:underline;
+}
+.form{
+     text-align:center;
+     width: 300px;
+     margin: 0 auto;
+}
+form {
+	display: inline-block;
+  text-align: center;
+  float: left;
+}
+input[type='text'], input[type='email'],
+input[type='password'] {
+     width: 500px;
+     border-radius: 2px;
+     border: 1px solid #CCC;
+     padding: 10px;
+     color: #333;
+     font-size: 14px;
+     margin-top: 10px;
+}
+input[type='submit']{
+     padding: 10px 25px 8px;
+     color: #fff;
+     background-color: #0090DA;
+     text-shadow: rgba(0,0,0,0.24) 0 1px 0;
+     font-size: 16px;
+     box-shadow: rgba(255,255,255,0.24) 0 2px 0 0 inset,#fff 0 1px 0 0;
+     border: 1px solid #0164a5;
+     border-radius: 2px;
+     margin-top: 10px;
+     cursor:pointer;
+}
+input[type='submit']:hover {
+     background-color: #0090DA;
+}
+
+
+.wrap {
+	text-align:center;
+	position:relative;
+	margin:0 auto;
+	width:900px;
+
+}
+
+.search_text{
+  width: 500px;
+}
+
+.container img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    opacity: 0.1;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+#searchHeader {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-top:50px;
+  margin-bottom:50px;
+}
+
+#searchHeader figure {
+  background-color:black;
+  display: inline-block;
+}
+
+#searchHeader figure img {
+  height: 100px;
+  width: auto;
+}
+
+#searchHeader  h1 {
+  display: inline-block;
+  max-width: 200px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1em;
+  vertical-align: top;
+}
+
+
+.wrap {
+	text-align:center;
+	position:relative;
+	margin:0 auto;
+	width:900px;
+
+}
+
+.search_text{
+  width: 500px;
+}
+
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
+
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
+
+main form input[type="submit"]{
+  background-color:rgba(0,0,0, 0.1);
+  width:50%!important;
+  float:right;
+  color:rgba(0,0,0,0.9);
+}
